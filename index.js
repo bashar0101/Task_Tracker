@@ -61,7 +61,7 @@ Choose an option: `,
             rl.question("Enter New Description: ", (newDesc) => {
               task.description = newDesc;
               saveTasks(tasks);
-              console.log("✅ Task updated");
+              console.log("Task updated");
               showMenu();
             });
           });
@@ -90,7 +90,7 @@ Choose an option: `,
           rl.question("Enter Task ID to Mark as Completed: ", (id) => {
             const task = tasks.find((t) => t.id === Number(id));
             if (!task) {
-              console.log("❌ Task not found");
+              console.log("Task not found");
               return showMenu();
             }
             task.completed = true;
